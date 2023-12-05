@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Tix.Guru/Logo.png" width="500px" hight="500px">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Tix.Guru|Login Page.</title>
+</head>
+<body>
+  <nav class="bg-slate-50 text-gray-900 w-screen h-20  flex   flex-shrink shadow-md absolute z-50 ">
+    <img src="Tix.Guru/large_(1)-QxMYxaN8o-transformed (1).png" alt=""
+    class="w-60 h-44 cursor-pointer absolute top-[-40px] ml-[150px] flex justify-center align-middle hover:opacity-50 max-sm:ml-[15px] max-lg:ml-[60px] max-sm:w-[10rem] max-sm:h-[9rem] max-sm:top-[-30px]">
+    
+    <input type="search" placeholder="Search Movies"
+    class="    2xl:shrink max-2xl:w-[15rem]  w-[31rem] h-[45px] bg-gray-300 text-sky-500 border-2 border-slate-200 absolute left-[27rem] top-[21px] focus:border-4 focus:border-blue-400 focus:bg-blue-950 selection:outline-none rounded-md placeholder:pl-2 placeholder:text-gray-400 font-semibold indent-4 max-sm:left-[17rem] hidden lg:block">
+    
+    <button
+    class="  flex absolute left-[61.5rem] top-[21px] w-[2.5rem] h-[40.5px] max-2xl:left-[44.5rem]  hover:bottom-2 border-blue-500 max-sm:left-[540px] hidden lg:block"><img
+    src="Tix.Guru/8666693_search_icon.png" alt="" width="20px"
+    class=" justify-center align-middle absolute top-2 left-[-20px] opacity-30 "></button>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" id="Resnav" viewBox="0 0 24 24" width="64" height="64" class="flex justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] block lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[5.75rem]"><path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z" fill="rgba(18,23,39,1)"></path></svg>
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" id="close" class="hidden justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[5.75rem]"><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z" fill="rgba(18,23,39,1)"></path></svg>
+    <!-- <img src="Tix.Guru/setup.png" alt=""
+    class="flex justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] block lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[5.75rem]"> -->
+    <div class="hidden lg:block">
+      <ul class="flex font-semibold text-lg space-x-8 absolute right-[2rem] top-5 mr-[150px] max-xl:mr-[80px]  ">
+        <li><a href="index.html" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Home</a></li>
+        <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Movies</a></li>
+        <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Showtimes</a></li>
+        <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Offers</a></li>
+      </ul>
+    </div>
+    <!-- <img src="Tix.Guru/account.png" alt=""
+    class=" flex justify-end  absolute right-6 top-[25px] align-middle w-[30px] h-[30px]  lg:hidden max-sm:w-[25px] max-sm:h-[25px] "> -->
+    <div class="h-[35vh] w-[100%] bg-gray-900 z-100 mt-[80px] flex justify-center align-middle hidden text-sky-500" id="afternav">
+      <div class="flex flex-col text-center">
+        <ul class=" font-semibold text-lg  pt-3 space-y-6 ">
+          <li><a href="index.html" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Home</a></li>
+          <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Movies</a></li>
+          <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Showtimes</a></li>
+          <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Offers</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+
+    <a href="login.html" target="_parent">
+
+      <svg xmlns="http://www.w3.org/2000/svg" id="aclogin" viewBox="0 0 24 24" width="64" height="64"   class=" flex justify-end  absolute right-6 top-[25px] align-middle w-[30px] h-[30px]  lg:hidden max-sm:w-[25px] max-sm:h-[25px] "><path d="M14.2558 21.7442L12 24L9.74416 21.7442C5.30941 20.7204 2 16.7443 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 16.7443 18.6906 20.7204 14.2558 21.7442ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="rgba(18,23,39,1)"></path></svg>
+    </a>
+      
+
+<div class="hidden lg:flex lg:flex-1 lg:justify-end ">
+  <a href="login.html"
+  class="text-base font-semibold leading-[3.5rem] text-gray-900 absolute right-[4.75rem] top-1 hover:text-sky-500 transition-duration: 700ms; ease-in-out">Log
+      in <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </a>
+</nav>
+  
+
+
+      <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+        <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+          <img class="mx-auto h-[15rem] w-auto" src="Tix.Guru/large_(1)-QxMYxaN8o-transformed (1).png" alt="Your Company" >
+          <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">Sign in to your account</h2>
+        </div>
+      
+        <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form class="space-y-6" action="#" method="POST">
+            <div>
+              <label for="email" class="block text-sm font-medium leading-6 text-gray-900">Email address</label>
+              <div class="mt-2">
+                <input id="email" name="email" type="email" autocomplete="email" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#436ad3] sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+              <div class="flex items-center justify-between">
+                <label for="password" class="block text-sm font-medium leading-6 text-gray-900">Password</label>
+                <div class="text-sm">
+                  <a href="#" class="font-semibold text-[#436ad3] hover:text-gray-900">Forgot password?</a>
+                </div>
+              </div>
+              <div class="mt-2">
+                <input id="password" name="password" type="password" autocomplete="current-password" required class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+              </div>
+            </div>
+      
+            <div>
+              <button type="submit" class="flex w-full justify-center rounded-md bg-[#436ad3] px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#436ad3]">Sign in</button>
+            </div>
+          </form>
+      
+          <p class="mt-10 text-center text-sm text-gray-500">
+            Not a member?
+            <a href="#" class="font-semibold leading-6 text-[#436ad3] hover:text-gray-900">Start a 14 day free trial</a>
+          </p>
+        </div>
+      </div>
+
+      <script>
+        document.getElementById("aclogin").addEventListener("click", (event) => {
+            history.back()
+        })
+      </script>
+</body>
+</html>

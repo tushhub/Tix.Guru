@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="Tix.Guru/Logo.png" width="500px" hight="500px">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+
+
+
+  <!-- <div id="container" class="m-auto w-[1280px] relative"> -->
+
+    
+    <nav class="bg-slate-50 text-gray-900 w-screen h-20  flex   flex-shrink shadow-md absolute z-50 ">
+      <img src="Tix.Guru/large_(1)-QxMYxaN8o-transformed (1).png" alt=""
+      class="w-60 h-44 cursor-pointer absolute top-[-40px] ml-[150px] flex justify-center align-middle hover:opacity-50 max-sm:ml-[15px] max-lg:ml-[60px] max-sm:w-[10rem] max-sm:h-[9rem] max-sm:top-[-30px]">
+      
+      <input type="search" placeholder="Search Movies"
+      class="    2xl:shrink max-2xl:w-[15rem]  w-[31rem] h-[45px] bg-gray-300 text-sky-500 border-2 border-slate-200 absolute left-[27rem] top-[21px] focus:border-4 focus:border-blue-400 focus:bg-blue-950 selection:outline-none rounded-md placeholder:pl-2 placeholder:text-gray-400 font-semibold indent-4 max-sm:left-[17rem] hidden lg:block">
+      
+      <button
+      class="  flex absolute left-[61.5rem] top-[21px] w-[2.5rem] h-[40.5px] max-2xl:left-[44.5rem]  hover:bottom-2 border-blue-500 max-sm:left-[540px] hidden lg:block"><img
+      src="Tix.Guru/8666693_search_icon.png" alt="" width="20px"
+      class=" justify-center align-middle absolute top-2 left-[-20px] opacity-30 "></button>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" id="Resnav" viewBox="0 0 24 24" width="64" height="64" class="flex justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] block lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[4.75rem]"><path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z" fill="rgba(18,23,39,1)"></path></svg>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64" id="close" class="hidden justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[4.75rem]"><path d="M12.0007 10.5865L16.9504 5.63672L18.3646 7.05093L13.4149 12.0007L18.3646 16.9504L16.9504 18.3646L12.0007 13.4149L7.05093 18.3646L5.63672 16.9504L10.5865 12.0007L5.63672 7.05093L7.05093 5.63672L12.0007 10.5865Z" fill="rgba(18,23,39,1)"></path></svg>
+
+
+      <!-- <img src="Tix.Guru/setup.png" alt=""
+      class="flex justify-end  absolute right-[8.5rem] top-[25px] align-middle w-[30px] h-[30px] block lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[5.75rem]"> -->
+      <div class="hidden lg:block">
+        <ul class="flex font-semibold text-lg space-x-8 absolute right-[2rem] top-5 mr-[150px] max-xl:mr-[80px]  ">
+          <li><a href="index.html" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Home</a></li>
+          <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Movies</a></li>
+          <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Showtimes</a></li>
+          <li><a href="#" class="hover:text-sky-500 transition-duration: 700ms; ease-in-out">Offers</a></li>
+        </ul>
+      </div>
+      <!-- <img src="Tix.Guru/account.png" alt=""
+      class=" flex justify-end  absolute right-6 top-[25px] align-middle w-[30px] h-[30px]  lg:hidden max-sm:w-[25px] max-sm:h-[25px] "> -->
+      <div class="h-[35vh] w-[100%] bg-gray-900 z-100 mt-[80px] flex justify-center align-middle hidden text-sky-500" id="afternav">
+        <div class="flex flex-col text-center">
+          <ul class=" font-semibold text-lg  pt-3 space-y-6 ">
+            <li><a href="index.html" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Home</a></li>
+            <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Movies</a></li>
+            <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Showtimes</a></li>
+            <li><a href="#" class="hover:bg-sky-700 hover:underline transition-duration: 700ms; ease-in-out">Offers</a></li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <a href="login.html" target="_parent">
+
+        <svg xmlns="http://www.w3.org/2000/svg" id="aclogin" viewBox="0 0 24 24" width="64" height="64"   class=" flex justify-end  absolute right-6 top-[25px] align-middle w-[30px] h-[30px]  lg:hidden max-sm:w-[25px] max-sm:h-[25px] "><path d="M14.2558 21.7442L12 24L9.74416 21.7442C5.30941 20.7204 2 16.7443 2 12C2 6.48 6.48 2 12 2C17.52 2 22 6.48 22 12C22 16.7443 18.6906 20.7204 14.2558 21.7442ZM6.02332 15.4163C7.49083 17.6069 9.69511 19 12.1597 19C14.6243 19 16.8286 17.6069 18.2961 15.4163C16.6885 13.9172 14.5312 13 12.1597 13C9.78821 13 7.63095 13.9172 6.02332 15.4163ZM12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11Z" fill="rgba(18,23,39,1)"></path></svg>
+      </a>
+
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="dark" width="64" height="64" class="flex justify-end  absolute right-[250px] top-[25px] align-middle w-[30px] h-[30px]  lg:hidden max-sm:w-[25px] max-sm:h-[25px] max-sm:right-[8rem]"><path d="M11.3807 2.01904C9.91573 3.38786 9 5.33708 9 7.50018C9 11.6423 12.3579 15.0002 16.5 15.0002C18.6631 15.0002 20.6123 14.0844 21.9811 12.6195C21.6613 17.8539 17.3149 22.0002 12 22.0002C6.47715 22.0002 2 17.523 2 12.0002C2 6.68532 6.14629 2.33888 11.3807 2.01904Z" fill="rgba(23,34,59,1)"></path></svg>
+        
+
+  <div class="hidden lg:flex lg:flex-1 lg:justify-end ">
+    <a href="login.html"
+    class="text-base font-semibold leading-[3.5rem] text-gray-900 absolute right-[4.75rem] top-1 hover:text-sky-500 transition-duration: 700ms; ease-in-out">Log
+        in <span aria-hidden="true">&rarr;</span></a>
+      </div>
+    </a>
+  </nav>
+    
+    
+    <!-- <section class=" flex justify-center align-middle" >
+      <div class=" justify-center align-middle bg-slate-700 w-[950px] h-[500px] rounded-[3.5rem] shadow-2xl relative top-[4.5rem]"> <h3 class="font-semibold text-7xl absolute mr-[35rem] text-center top-[5rem] align-middle leading-[5.5rem] text-purple-600 shadow-2xl
+        ">Book Your Entaintment Now On "TIX GURU"</h3>   
+      </div>
+    </section> -->
+    
+    
+    
+    <div class="relative overflow-hidden  z-0 pt-[4.25rem]">
+      <div class="pb-80 pt-16 sm:pb-40 sm:pt-24 lg:pb-48 lg:pt-40 max-[639px]:pt-[6rem]">
+        <div class="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
+          <div class="sm:max-w-lg">
+            <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl max-sm:pt-[1.5rem]">Welcome to TIX.GURU</h1>
+            <p class="mt-4 text-xl text-gray-500">your one-stop destination for an unparalleled movie ticket booking
+              experience. Say goodbye to the hassle of standing in long queues or endlessly searching for the perfect
+              showtime – with TIX.GURU, your movie night just got easier, faster, and more enjoyable.</p>
+            </div>
+            <div>
+              <div class="mt-10">
+                <!-- Decorative image grid -->
+                <div aria-hidden="true"
+                class="pointer-events-none lg:absolute lg:inset-y-0 lg:mx-auto lg:w-full lg:max-w-7xl">
+                <div
+                class="absolute transform sm:left-1/2 sm:top-0 sm:translate-x-8 lg:left-1/2 lg:top-1/2 lg:-translate-y-1/2 lg:translate-x-8">
+                <div class="flex items-center space-x-6 lg:space-x-8">
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg sm:opacity-0 lg:opacity-100">
+                      <img
+                      src="https://m.media-amazon.com/images/M/MV5BNTE2MzNlNDktMzNhZS00ZmZlLTkxMDQtNjQ5ZDlkMmVjN2FhXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX819_.jpg"
+                      alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img
+                      src="https://m.media-amazon.com/images/M/MV5BMjljYTFlYWUtN2I2Zi00NmEyLWI1MzQtY2U1OWI2M2IwNmZjXkEyXkFqcGdeQXVyMTU2NTcyMg@@._V1_FMjpg_UY2222_.jpg"
+                      alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://stat5.bollywoodhungama.in/wp-content/uploads/2023/10/Animal-5.jpg" alt=""
+                      class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img
+                      src="https://stat5.bollywoodhungama.in/wp-content/uploads/2023/10/The-Creator-English-306x393.jpg"
+                      alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://stat4.bollywoodhungama.in/wp-content/uploads/2023/08/Khushi-01-306x393.jpg"
+                      alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                  <div class="grid flex-shrink-0 grid-cols-1 gap-y-6 lg:gap-y-8">
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://stat5.bollywoodhungama.in/wp-content/uploads/2023/05/Sisu-English-306x393.jpg"
+                      alt="" class="h-full w-full object-cover object-center">
+                    </div>
+                    <div class="h-64 w-44 overflow-hidden rounded-lg">
+                      <img src="https://media5.bollywoodhungama.in/wp-content/uploads/2023/10/Leo-FL-306x393.jpg" alt=""
+                      class="h-full w-full object-cover object-center">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#"
+              class="inline-block rounded-md border border-transparent bg-gray-900 px-8 py-3 text-center font-medium text-white hover:bg-sky-500">Book
+              Now</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  <!--======================================= Movies Categories Start============================== -->
+  
+
+  
+  <div
+    class="  flex justify-center align-middle w-screen h-[1000px] space-x-16 space-y-3 relative flex-wrap top-[440px] max-sm:top-[285px] max-sm:left-[-35px] p-[35px]"
+    id="Mcatbox">
+    
+    <div></div>
+    
+    <h1
+    class="text-gray-900 absolute text-[2rem] top-[-170px] font-sans font-extrabold md:text-[5rem] max-sm:top-[-8.5rem]">
+    Movies Category </h1>
+    
+    <div id="box1"
+    class="  w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   left-0 block cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600  max-sm:h-[13.25rem] max-sm:w-[13rem]">
+    <img src="Tix.Guru/poster/Untitled-1.jpg" alt="" class="pt-0 rounded-md
+    top-[90px] left-[290px] object-fill object-center w-80 h-[20rem] opacity-100   m-0    ">
+  </div>
+  
+  <div id="box2"
+  class=" w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600 max-sm:h-[13.25rem] max-sm:w-[13rem]">
+  <img src="Tix.Guru/poster/hindi.jpg" alt="" class="pt-0 rounded-md
+  top-[79px]  object-center w-80 h-[20rem] opacity-100 object-fill  m-0    ">
+</div>
+
+
+<div id="box3"
+class=" w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600 max-sm:h-[13.25rem] max-sm:w-[13rem]">
+<img src="Tix.Guru/poster/Tamil.jpg" alt="" class="pt-0 rounded-md
+top-[79px]  object-center w-80 h-[20rem] opacity-100 object-fill  m-0    ">
+</div>
+
+<div id="box4"
+class=" w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600 max-sm:h-[13.25rem] max-sm:w-[13rem]">
+<img src="Tix.Guru/poster/English.jpg" alt="" class="pt-0 rounded-md
+top-[498px]  object-center w-80 h-[20rem] opacity-100 object-fill  m-0    ">
+</div>
+
+
+<div id="box5"
+class=" w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600 max-sm:h-[13.25rem] max-sm:w-[13rem]">
+<img src="Tix.Guru/poster/Telgu.jpg" alt="" class="pt-0 rounded-md
+top-[498px]  object-center w-80 h-[20rem] opacity-100 object-fill  m-0    ">
+</div>
+
+<div id="box6"
+class=" w-80 h-[20rem] rounded-md  overflow-hidden hover:opacity-90   cursor-pointer transition-all ease-in-out duration-1000 border-solid border-2 border-indigo-600 max-sm:h-[13.25rem] max-sm:w-[13rem]">
+<img src="Tix.Guru/poster/Kannada.jpg" alt="" class="pt-0 rounded-md
+top-[498px]  object-center w-80 h-[20rem] opacity-100 object-fill  m-0    ">
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!--======================================= Movies Categories End============================== -->
+
+
+
+
+
+
+
+<!-- <section> -->
+  <div class=" relative top-[520px] w-[1318px] h-[30rem] m-auto  flex overflow-hidden    max-sm:overflow-x-scroll  max-[768px]:top-[95rem] max-[640px]:w-[265px] max-[640px]:top-[685px] sm:min-w-64 max-xl:w-[65rem] max-lg:w-[32rem] max-md:top-[95rem] max-sm:w-[16rem] max-sm:top-[45rem] max-lg:overflow-x-scroll max-lg:snap-x max-sm:snap-proximity" id="container">
+
+     <div class="text-gray-900 absolute text-[29px]  font-bold uppercase max-sm:text-[20px]">Top Recomended</div>
+    <div class=" grid grid-flow-col grid-cols-[calc((100%/5))-12px]   space-x-6 absolute overflow-visible pt-[50px] pl-[2px]  " id="slider">
+      
+      
+      
+      
+
+      
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill snap-center ">
+        <img src="Tix.Guru/nall.jpg" alt="" class="rounded-lg object-fill w-fit h-full  ">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill snap-center ">
+        <img src="Tix.Guru/12fail.jpg" alt="" class="rounded-lg object-fill w-fit h-full ">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill  ">
+        <img src="Tix.Guru/Awarness.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill  ">
+        <img src="Tix.Guru/kotha.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+       
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill">
+        <img src="Tix.Guru/earth.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill ">
+        <img src="Tix.Guru/gran.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill ">
+        <img src="Tix.Guru/gost.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+      
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill ">
+        <img src="Tix.Guru/tiger.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill  ">
+        <img src="Tix.Guru/karuun.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div> 
+
+      <div class="h-[23rem] w-[15rem] bg-slate-200 rounded-2xl object-fill ]">
+        <img src="Tix.Guru/atma.jpg" alt="" class="rounded-lg object-fill w-screen h-full snap-center">
+      </div>
+
+
+     
+
+    </div>
+    <button onclick="slide()" id="btn" class="bg-blue-950 rounded-full absolute flex justify-center align-middle w-[3.25rem] h-[3rem] top-[13rem] left-[79rem] cursor-pointer max-[820px]:hidden max-lg:hidden">
+      <img src="Tix.Guru/poster/next.png" alt="" class="pt-[10px]">
+    </button>
+    <button id="btn2" onclick="slide2()" class="bg-sky-500 rounded-full absolute  flex justify-center align-middle  w-[3.25rem] h-[3rem] top-[13rem] left-[79rem] cursor-pointer hidden ">
+      <img src="Tix.Guru/poster/left-arrow (1).png" alt="" class="pt-[2px] pl-3">
+    </button>
+    
+   
+  </div>
+ 
+  
+  
+  
+  
+  <!-- Steps -->
+  
+   <div class="w-[100vw] h-[50rem]  relative top-[50.5rem] mb-[75.75rem] flex  justify-center align-middle flex-wrap  space-x-64 overflow-hidden max-[1183px]:h-[400px] max-lg:h-[80rem] max-sm:h-[90rem] "> 
+    
+     <!-- <div class="text-[40px] text-gray-900 absolute max-sm:text-[20px] ">"Find Movies & Showtimes," for TIX.GURU:"</div>  -->
+    <div class="flex justify-center align-middle space-x-12 space-y-7 sm:space-x-16 flex-wrap   absolute pt-[85px]  max-sm:space-y-12  max-sm:mr-[2.5rem] "> 
+      
+      
+      <div class="  bg-gray-100  overflow-hidden flex justify-center align-middle outline outline-[#00000017] outline-[6px] outline-offset-[10px] hover:outline-sky-500  h-[30rem] w-[22rem] duration-700 rounded-3xl mt-[28px] max-[503px]:ml-[1.5rem] max-[1157px]:h-[26rem]  cursor-pointer text-ellipsis max-[1184px]:w-[15rem] max-sm:h-[25rem] max-sm:w-[16rem] max-sm:ml-[2rem] ">
+        <div class="text-gray-900 text-center text-[50px] font-bold flex justify-center absolute  ">Step 1</div>
+        <img src="Tix.Guru/search.png" alt="" class="w-[9.5rem] h-[7.5rem] absolute top-[15.5rem]">
+        <div class="text-center text-gray-600 flex justify-center align-bottom text-[25px] top-[25rem] pl-2 pr-2 text-ellipsis pt-[18.75rem] font-semibold leading-[40px] max-sm:text-[19px] max-sm:leading-none">Browse Movies: Explore the latest releases and favorites. Search by title, genre.</div>  
+      </div>
+      
+
+
+      <div class="  bg-gray-100  overflow-hidden flex justify-center align-middle outline outline-[#00000017] outline-[6px] outline-offset-[10px] hover:outline-sky-500  h-[30rem] w-[22rem] duration-700 rounded-3xl mt-[28px] max-[503px]:ml-[1.5rem] max-[1157px]:h-[26rem]  cursor-pointer text-ellipsis max-[1152]:w-[15rem] max-[1152]:h-[25rem] max-sm:h-[25rem] max-sm:w-[16rem]">
+        <div class="text-gray-900 text-center text-[50px] font-bold flex justify-center absolute left- ">Step 2</div>
+        <img src="Tix.Guru/msearch.png" alt="" class="w-[22.5rem] h-[21.5rem] absolute top-[7.5rem] max-[768px]:pt-16 max-sm:top-[35.25rem]">
+        <div class="text-center text-gray-600 flex justify-center align-bottom text-[25px] top-[25rem] pl-2 pr-2 text-ellipsis pt-[18.75rem] font-semibold leading-[40px] max-sm:text-[19px] max-sm:leading-none">Select Showtime: Check nearby theaters for your movie. Choose the perfect date and time.</div>  
+      </div>
+
+
+      <div class="  bg-gray-100  overflow-hidden flex justify-center align-middle outline outline-[#00000017] outline-[6px] outline-offset-[10px] hover:outline-sky-500  h-[30rem] w-[22rem] duration-700 rounded-3xl mt-[28px] max-[503px]:ml-[1.5rem] max-[1157px]:h-[26rem]  cursor-pointer text-ellipsis max-[1152]:w-[15rem] max-[1152]:h-[25rem] max-sm:h-[25rem] max-sm:w-[16rem]">
+        <div class="text-gray-900 text-center text-[50px] font-bold flex justify-center absolute left- ">Step 3</div>
+        <img src="Tix.Guru/poster/vecteezy_cinema-tickets-with-pop-corn-drink-amd-glasses_11720979.png" alt="" class="w-[12.5rem] h-[13.5rem] absolute top-[12.5rem] max-lg:top-[44rem] max-sm:top-[68rem]">
+        <div class="text-center text-gray-600 flex justify-center align-bottom text-[25px] top-[25rem] pl-2 pr-2 text-ellipsis pt-[18.75rem] font-semibold leading-[40px] max-sm:text-[19px] max-sm:leading-none">Choose Seats: Use our seating map to pick your spot and secure your preferred seats.</div>  
+      </div>
+
+      
+    </div>
+    
+  </div>  
+
+  
+  <!-- CEO Informatio -->
+
+
+  <section class="relative isolate overflow-hidden bg-white px-6 py-22 sm:py-32 lg:px-8 top-[-25rem]">
+    <div class="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20"></div>
+    <div class="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+    <div class="mx-auto max-w-2xl lg:max-w-4xl">
+      <img class="mx-auto h-[10rem] " src="Tix.Guru/large_(1)-QxMYxaN8o-transformed (1).png " alt="" >
+      <figure class="mt-[-1.5rem]">
+        <blockquote class="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
+          <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed rerum et corporis.”</p>
+        </blockquote>
+        <figcaption class="mt-10">
+          <img class="mx-auto h-[3.5rem] w-[3.5rem] rounded-full cursor-pointer" src="Tix.Guru/mony.Heist.jpg" alt="">
+          <div class="mt-4 flex items-center justify-center space-x-3 text-base">
+            <div class="font-semibold text-gray-900">Tushar Bhagat</div>
+            <svg viewBox="0 0 2 2" width="3" height="3" aria-hidden="true" class="fill-gray-900">
+              <circle cx="1" cy="1" r="1" />
+            </svg>
+            <div class="text-gray-600">CEO of Tix.Guru</div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+  
+  
+  
+  
+
+  <div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <h2 class="text-center text-lg font-semibold leading-8 text-gray-900">Trusted by the world’s most innovative teams</h2>
+      <div class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG0aMgy6qzW5UXYZTaEM1VKg36OIYyd1ws3w3CiVJUr6NJPC3MDKE3ypaWIssXv0uDTU4&usqp=CAU" alt="Transistor" width="158" height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/reform-logo-gray-900.svg" alt="Reform" width="158" height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/tuple-logo-gray-900.svg" alt="Tuple" width="158" height="48">
+        <img class="col-span-2 max-h-12 w-full object-contain sm:col-start-2 lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/savvycal-logo-gray-900.svg" alt="SavvyCal" width="158" height="48">
+        <img class="col-span-2 col-start-2 max-h-12 w-full object-contain sm:col-start-auto lg:col-span-1" src="https://tailwindui.com/img/logos/158x48/statamic-logo-gray-900.svg" alt="Statamic" width="158" height="48">
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script>
+    
+    
+  //  document.getElementById("btn").addEventListener("click",function () {
+  //   document.getElementById("slider").style.transform = "translateX(-)";
+  //   document.getElementById("slider").style.transition = " all ease 0.9s"
+  //   document.getElementById("btn").style.animation = "fadeIn 3s"
+  //   document.getElementById("btn").remove();
+  //   document.getElementById("btn2").show();
+  //  })
+    
+
+  //  document.getElementById("btn2").addEventListener("click",function () {
+  //   document.getElementById("slider").style.transform = "translateX(0px)";
+  //   document.getElementById("slider").style.transition = " all ease 0.9s"
+  //   document.getElementById("btn").style.animation = "fadeIn 3s"
+  //   document.getElementById("btn2").show();
+  //  })
+    
+
+
+     function slide() {
+        $(document).click(function () {
+            $("#btn").hide(),
+              $("#btn2").show()
+        
+        
+          })
+        
+          document.getElementById("slider").style.transform = "translateX(-1056px)";
+          // document.getElementById("Topbox").style.left = "-123px";
+          // document.getElementById("Topbox").style.width = "calc(400%)";
+          document.getElementById("slider").style.transition = " all ease 0.9s"
+         document.getElementById("btn").style.animation = "fadeIn 3s"
+         document.getElementById("btn2").style.display = "hidden"
+        
+        
+        
+        
+        
+        
+         }
+        
+         function slide2() {
+             $(document).click(function () {
+                 $("#btn2").hide(),
+                   $("#btn").show()
+            
+               })
+            
+               document.getElementById("slider").style.transform = "translateX(0%)";
+              //  document.getElementById("topbox").style.left = "20px";
+            
+               document.getElementById("slider").style.transition = " all ease 0.9s"
+               document.getElementById("btn").style.animation = "fadeIn 5s"
+            
+            // document.getElementById("button").style.opacity="0.0"; 
+            
+             }
+
+
+            //  Responsive Navbar Script
+ 
+               let icon=document.getElementById("Resnav");
+               let nav=document.getElementById("afternav");
+               let close=document.getElementById("close");
+          
+
+              icon.addEventListener("click", Rnav);
+
+              function Rnav() {
+                console.log('nav Inside');
+                $("#afternav").show();
+                $("#Resnav").hide();
+                $("#close").show();
+
+              }
+
+              close.addEventListener("click", blank);
+              function blank() {
+                $("#afternav").hide();
+                $("#Resnav").show();
+                $("#close").hide();
+              }
+
+              //  Responsive Navbar Script End
+
+
+
+
+
+
+
+
+
+            </script>
+
+
+
+
+
+
+
+</div>
+</body>
+
+
+
+</html>
